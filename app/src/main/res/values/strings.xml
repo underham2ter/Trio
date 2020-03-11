@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Trio</string>
+    <string name="textview">TextView</string>
+    <string name="time">TIME</string>
+</resources>
