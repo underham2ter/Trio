@@ -1,9 +1,11 @@
 package com.example.trio;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Display;
 
@@ -11,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class GameProcess extends AppCompatActivity {
     int height, width;
-    GameView gameView;
-
+    private GameView gameView;
+    private GameProcess gameProcess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,19 @@ public class GameProcess extends AppCompatActivity {
         width = size.x;
         height = size.y;
         setContentView(new GameView(this,width,height));
+        gameView = new GameView(this,size.x,size.y);
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        gameView.pause();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        gameView.resume();
     }
 
     public void onBackPressed() {
@@ -32,13 +47,8 @@ public class GameProcess extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Sure", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
-
-                        Intent startMain = new Intent(Intent.ACTION_MAIN);
-                        startMain.addCategory(Intent.CATEGORY_HOME);
-                        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(startMain);
-                        finish();
+                        Intent intent = new Intent(GameProcess.this, MainActivity.class);
+                        startActivity(intent);
                     }
                 })
                 .setNegativeButton("Nope", new DialogInterface.OnClickListener() {
@@ -50,6 +60,23 @@ public class GameProcess extends AppCompatActivity {
         alert.show();
 
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+//        Intent intent=new Intent();
+//        intent.setClass(gameProcess,gameProcess.getClass());
+//        finish();
+//        gameProcess.startActivity(intent);
+    }
+
+
+//    public void restartActivity(){
+//        Intent mIntent = getIntent();
+//        finish();
+//        startActivity(mIntent);
+//    }
+
 
 }
 

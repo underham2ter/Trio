@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:visibility="visible"
+    tools:visibility="visible">
+
+    <Button
+        android:id="@+id/buttonLogIn"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="528dp"
+        android:background="#F5DF5899"
+        android:text="Log In"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserName" />
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="154dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#8CFFFFFF"
+        android:textColorLink="#83FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogIn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

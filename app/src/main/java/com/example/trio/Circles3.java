@@ -11,13 +11,11 @@ public class Circles3 {
 
 
     public Circles3(Context context) {
+        angle3 = 240;
+        radius3 = 220;
         x3 = (int)(0+ Math.cos(angle3 * Math.PI / 180F) * radius3);
         y3 = (int)(0+Math.sin(angle3 * Math.PI / 180F) * radius3);
         speed = 1;
-        angle3 = 240;
-        radius3 = 220;
-
-
     }
 
 

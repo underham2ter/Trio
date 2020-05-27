@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_secondary_variant">
+
+    <TextView
+        android:id="@+id/blahblahblah"
+        android:layout_width="168dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="166dp"
+        android:text="Log In or Register"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Type your nickname!"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blahblahblah" />
+
+    <Button
+        android:id="@+id/finishLoginButton"
+        android:layout_width="209dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/design_default_color_primary_dark"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNameText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

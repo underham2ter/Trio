@@ -24,11 +24,11 @@ public class Circles{
 
 
     public Circles(Context context) {
+        radius = 220;
+        angle = 0;
         x1 = (int)Math.cos(angle * Math.PI / 180F) * radius;
         y1 = (int)(0 + Math.sin(angle * Math.PI / 180F) * radius);
         speed = 1;
-        angle = 0;
-        radius = 220;
     }
 
 
